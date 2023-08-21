@@ -11,4 +11,10 @@ def fromJson(file_path: str)->dict:
         dict: Dictionary containing the data of the json file.
     
     """
-    return
+    f=open(file_path,'r',encoding='UTF8')
+    data=f.read()
+    return json.loads(data)
+
+if __name__ == "__main__":
+    data=fromJson('data/result.json')
+    print(data)
